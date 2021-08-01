@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="Countdown Timer"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:indicatorColor="@color/teal_200"
+        app:indicatorSize="150dp"
+        app:trackColor="@color/gray"
+        app:trackThickness="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_timer_count_finished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/progress_indicator"
+        app:layout_constraintEnd_toStartOf="@+id/tv_timer_count_total"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_indicator"
+        app:layout_constraintTop_toTopOf="@+id/progress_indicator" />
+
+    <TextView
+        android:id="@+id/tv_timer_count_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/progress_indicator"
+        app:layout_constraintTop_toTopOf="@+id/progress_indicator"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_indicator"
+        app:layout_constraintStart_toEndOf="@+id/tv_timer_count_finished" />
+
+    <TextView
+        android:id="@+id/tv_title_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer: "
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/progress_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_indicator"
+        app:layout_constraintStart_toEndOf="@+id/tv_timer_count_finished" />
+
+    <TextView
+        android:id="@+id/tv_title_sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20s"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/tv_title_timer"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_timer"
+        app:layout_constraintTop_toTopOf="@+id/tv_title_timer" />
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <Button
+            android:id="@+id/btn_add_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+10s"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/teal_200"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_playpause_timer"
+            />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_playpause_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_play_24"
+            app:maxImageSize="40dp"
+            app:tint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_add_sec"
+            app:layout_constraintEnd_toStartOf="@+id/btn_reset"
+            />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_200"
+            android:gravity="center"
+            android:text="Reset"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_playpause_timer"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
