@@ -32,9 +32,10 @@ repositories {
    
    ###### Methods to manage countdown timer
         fun startCountDownTimer()
-        fun stopCountDownTimer()
         fun pauseCountDownTimer()
         fun resumeCountDownTimer()
+        fun stopCountDownTimer()
+        fun cancelCountDownTimer()
    
    ###### Abstract methods for updating UI
         fun onTimerTick(timeRemaining: Long)    // Called after every time interval.
