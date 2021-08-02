@@ -18,7 +18,7 @@ repositories {
 ###### Add following dependency in app gradle file
 
 ```
-  implementation 'com.github.orbitalsonic:SonicCountDownTimer:1.0.0'
+  implementation 'com.github.orbitalsonic:SonicCountDownTimer:1.0.3'
  
  ```
  
