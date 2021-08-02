@@ -99,6 +99,14 @@ abstract class SonicCountDownTimer : SonicCountDownTimerListener {
     }
 
     /**
+     * Method to cancel the CountDownTimer.
+     */
+    fun cancelCountDownTimer() {
+        isTimerRunning = false
+        mHandler!!.removeMessages(MSG)
+    }
+
+    /**
      * Method to check whether the CountDownTimer is paused.
      *
      * @return: true if CountDownTimer is paused else false.
