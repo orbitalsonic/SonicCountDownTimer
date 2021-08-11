@@ -1,6 +1,6 @@
 [![](https://jitpack.io/v/orbitalsonic/SonicCountDownTimer.svg)](https://jitpack.io/#orbitalsonic/SonicCountDownTimer)
 # CountDownTimer-With-Pause-Resume-Android-Kotlin
-CountDownTimer With Pause &amp; Resume in Android using Kotlin
+CountDownTimer in Android is used to set a countdown based on interval set by you and it will stop when the time has come in future.  You can use this Count Down Timer for creating any countdown for an event. But in some cases we need Pause or Resume CountDownTimer but it doesn't have Pause and Resume methods. SonicCountDownTimer library will fulfill this need.
 
 # Add Gradle Files
 
@@ -18,7 +18,7 @@ repositories {
 ###### Add following dependency in app gradle file
 
 ```
-  implementation 'com.github.orbitalsonic:SonicCountDownTimer:1.0.3'
+  implementation 'com.github.orbitalsonic:SonicCountDownTimer:1.0.4'
  
  ```
  
@@ -32,9 +32,10 @@ repositories {
    
    ###### Methods to manage countdown timer
         fun startCountDownTimer()
-        fun stopCountDownTimer()
         fun pauseCountDownTimer()
         fun resumeCountDownTimer()
+        fun stopCountDownTimer()
+        fun cancelCountDownTimer()
    
    ###### Abstract methods for updating UI
         fun onTimerTick(timeRemaining: Long)    // Called after every time interval.
