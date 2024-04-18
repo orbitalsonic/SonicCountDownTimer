@@ -41,8 +41,8 @@ publishing {
     publications {
         release(MavenPublication) {
             groupId = 'com.orbitalsonic.sonictimer'
-            artifactId = 'SonicCountDownTimer'
-            version = '1.0.5'
+            artifactId = 'sonictimer'
+            version = '1.0.4'
 
             afterEvaluate {
                 from components.release
