@@ -4,7 +4,7 @@ CountDownTimer in Android is used to set a countdown based on interval set by yo
 
 # Add Gradle Files
 
-###### Add following lines in project gradle file
+Add maven repository in project level build.gradle or in latest project setting.gradle file
 
 ```
 repositories {
