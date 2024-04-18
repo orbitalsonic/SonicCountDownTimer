@@ -9,6 +9,13 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.progressindicator.CircularProgressIndicator
 import com.orbitalsonic.sonictimer.SonicCountDownTimer
 
+/**
+ * @Author: Muhammad Yaqoob
+ * @Date: 18,April,2024.
+ * @Accounts
+ *      -> https://github.com/orbitalsonic
+ *      -> https://www.linkedin.com/in/myaqoob7
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var countDownTimerWithPause: SonicCountDownTimer

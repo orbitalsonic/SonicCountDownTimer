@@ -5,10 +5,12 @@ import android.os.Looper
 import android.os.Message
 
 /**
- * Created by @author Engr. Muhammad Yaqoob
+ * @Author: Muhammad Yaqoob
+ * @Date: 06,April,2024.
+ * @Accounts
+ *      -> https://github.com/orbitalsonic
+ *      -> https://www.linkedin.com/in/myaqoob7
  */
-
-
 abstract class SonicCountDownTimer : SonicCountDownTimerListener {
     /**
      * To maintain Timer start and stop status.

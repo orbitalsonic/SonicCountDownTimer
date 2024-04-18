@@ -1,9 +1,12 @@
 package com.orbitalsonic.sonictimer
 
 /**
- * Created by @author Engr. Muhammad Yaqoob
+ * @Author: Muhammad Yaqoob
+ * @Date: 06,April,2024.
+ * @Accounts
+ *      -> https://github.com/orbitalsonic
+ *      -> https://www.linkedin.com/in/myaqoob7
  */
-
 interface SonicCountDownTimerListener {
     /**
      * Method to be called every second by the [SonicCountDownTimer]
